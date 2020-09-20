@@ -64,7 +64,7 @@ Finally, create the mysql database for grafana:
 
 ::
 
- [isabell@stardust ~]$ mysql -e "CREATE DATABASE isabell_grafana"
+ [isabell@stardust ~]$ mysql -e "CREATE DATABASE "$(whoami)"_grafana" 
  [isabell@stardust ~]$
 
 Installation
@@ -77,9 +77,10 @@ Find the latest version of grafana_ for the platform ``linux`` from the `downloa
 
 ::
 
- [isabell@stardust ~]$ wget https://dl.grafana.com/oss/release/grafana-6.7.3.linux-amd64.tar.gz
- [isabell@stardust ~]$ tar xvzf grafana-6.7.3.linux-amd64.tar.gz
- [isabell@stardust ~]$ cd grafana-6.7.3
+ [isabell@stardust ~]$ VERSION=6.7.3
+ [isabell@stardust ~]$ wget https://dl.grafana.com/oss/release/grafana-$VERSION.linux-amd64.tar.gz
+ [isabell@stardust ~]$ tar xvzf grafana-$VERSION.linux-amd64.tar.gz
+ [isabell@stardust ~]$ cd grafana-$VERSION
  [isabell@stardust grafana-6.7.3]$
 
 Step 2
